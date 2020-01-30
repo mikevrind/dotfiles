@@ -1,8 +1,7 @@
 tap "derailed/k9s"
 tap "homebrew/bundle"
-tap "caskroom/cask"
+tap "caskroom/cask-cask"
 tap "homebrew/core"
-tap "homebrew/php"
 tap "homebrew/services"
 tap "int128/kubelogin"
 
@@ -34,8 +33,8 @@ brew "minikube", link: false
 brew "mysql"
 brew "node"
 brew "openssl"
-brew "php-code-sniffer"
 brew "php@7.2", restart_service: true, link: true
+brew "php-code-sniffer"
 brew "pinentry-mac"
 brew "pkg-config"
 brew "prettyping"
@@ -60,12 +59,11 @@ cask "dropbox"
 cask "firefox"
 cask "google-backup-and-sync"
 cask "google-chrome"
-cask "gpgtools"
+cask "gpg-suite"
 cask "imagealpha"
 cask "imageoptim"
 cask "iterm2"
 cask "jetbrains-toolbox"
-cask "minikube"
 cask "mysqlworkbench"
 cask "postman"
 cask "robo-3t"
@@ -76,10 +74,8 @@ cask "tableplus"
 cask "viscosity"
 
 mas "1Password", id: 443987910
-mas "Annotate", id: 918207447
 mas "Bear", id: 1091189122
 mas "ColorSlurp", id: 1287239339
-mas "FileZilla Pro - FTP and Cloud", id: 1298486723
 mas "Microsoft Outlook", id: 985367838
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
