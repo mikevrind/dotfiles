@@ -77,3 +77,4 @@ export LANG=en_US.UTF-8
 # Includes
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $DOTFILES/aliases.zsh
