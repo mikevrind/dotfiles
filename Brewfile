@@ -73,7 +73,7 @@ cask "spotify"
 cask "tableplus"
 cask "viscosity"
 
-mas "1Password", id: 443987910
+mas "1Password 7", id: 1333542190
 mas "Bear", id: 1091189122
 mas "ColorSlurp", id: 1287239339
 mas "Microsoft Outlook", id: 985367838
