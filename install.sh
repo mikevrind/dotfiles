@@ -6,8 +6,8 @@ echo "Setting up your Mac..."
 
 # Link the dotfiles
 ln -sf "$DOTFILES_DIR/.curlrc" ~
-ln -sf "$DOTFILES_DIR/.gitconfig" ~
-ln -sf "$DOTFILES_DIR/.gitignore_global" ~
+ln -sf "$DOTFILES_DIR/git/.gitconfig" ~
+ln -sf "$DOTFILES_DIR/git/.gitignore_global" ~
 ln -sf "$DOTFILES_DIR/.mackup.cfg" ~
 ln -sf "$DOTFILES_DIR/.zshrc" ~
 ln -sf "$DOTFILES_DIR/aliases.zsh" ~
@@ -30,12 +30,16 @@ brew update
 brew tap homebrew/bundle
 brew bundle
 
-# Make ZSH the default shell environment
-chsh -s $(which zsh)
-
 # Create a Sites directory
 # This is a default directory for macOS user accounts but doesn't comes pre-installed
 mkdir $HOME/Code
+
+# Add theme for ZSH
+mkdir -p ~/.oh-my-zsh/themes/
+
+# Set git hook
+mkdir -p ~/.git-templates/
+ln -sf "$DOTFILES_DIR/git/hooks" ~/.git-templates
 
 # Set macOS preferences
 # We will run this last because this will reload the shell
