@@ -6,7 +6,7 @@ DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 # still be updates and installables in the Mac App Store. There's a nifty
 # command line interface to it that we can use to just install everything, so
 # yeah, let's do that.
-echo "› sudo softwareupdate -i -a"
+echo "Check for software updates..."
 sudo softwareupdate -i -a
 
 # Link the dotfiles
