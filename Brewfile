@@ -17,7 +17,7 @@ brew "curl"
 brew "derailed/k9s/k9s"
 brew "dive"
 brew "findutils"
-brew "gearman", link: false
+brew "gearman"
 brew "git"
 brew "git-extras"
 brew "gnupg"

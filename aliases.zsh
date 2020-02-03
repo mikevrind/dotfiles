@@ -23,6 +23,6 @@ alias gs="git status"
 # Docker
 alias dsa="docker ps -qq | xargs docker stop"
 
-php_switch() {
+php_switch_to() { # php_switch_to 7.2
  brew-php-switcher "$1" -s=valet,apache
 }

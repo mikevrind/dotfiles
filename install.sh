@@ -30,6 +30,11 @@ brew update
 brew tap homebrew/bundle
 brew bundle
 
+# Install PHP libraries via pecl
+pecl install redis
+pecl install xdebug
+pecl install pcov
+
 # Create a Sites directory
 # This is a default directory for macOS user accounts but doesn't comes pre-installed
 mkdir $HOME/Code
