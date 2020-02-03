@@ -10,6 +10,7 @@ alias line_count="find . -name '*.php' | xargs wc -l"
 alias generate_ssh="ssh-keygen -t rsa -b 4096 -o -a 100"
 alias dr="defaults read"
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+alias brw="brew" # For all the times I type brw
 
 # Directories
 alias dotfiles="cd $DOTFILES"
