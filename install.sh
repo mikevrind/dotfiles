@@ -9,7 +9,6 @@ ln -sf "$DOTFILES_DIR/.curlrc" ~
 ln -sf "$DOTFILES_DIR/git/.gitconfig" ~
 ln -sf "$DOTFILES_DIR/git/.gitignore_global" ~
 ln -sf "$DOTFILES_DIR/.mackup.cfg" ~
-ln -sf "$DOTFILES_DIR/.zshrc" ~
 ln -sf "$DOTFILES_DIR/aliases.zsh" ~
 
 # Setup GnuPG
@@ -27,6 +26,10 @@ brew update
 
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# Overwrite .zshrc
+rm ~/.zshrc
+ln -sf "$DOTFILES_DIR/.zshrc" ~
 
 # Install all our dependencies with bundle (See Brewfile)
 brew tap homebrew/bundle
