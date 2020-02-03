@@ -24,9 +24,6 @@ fi
 # Update Homebrew recipes
 brew update
 
-# Install oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
 # Overwrite .zshrc
 rm ~/.zshrc
 ln -sf "$DOTFILES_DIR/.zshrc" ~
@@ -51,3 +48,6 @@ ln -sf "$DOTFILES_DIR/git/hooks" ~/.git-templates
 # Set macOS preferences
 # We will run this last because this will reload the shell
 source .macos
+
+# Install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"

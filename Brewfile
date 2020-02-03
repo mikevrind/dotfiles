@@ -1,6 +1,5 @@
 tap "derailed/k9s"
 tap "homebrew/bundle"
-tap "caskroom/cask-cask"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "int128/kubelogin"
