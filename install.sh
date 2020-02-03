@@ -11,7 +11,7 @@ ln -sf "$DOTFILES_DIR/git/.gitignore_global" ~
 ln -sf "$DOTFILES_DIR/.mackup.cfg" ~
 ln -sf "$DOTFILES_DIR/.zshrc" ~
 ln -sf "$DOTFILES_DIR/aliases.zsh" ~
-ln -sf "$DOTFILES_DIR/path.zsh" ~
+ln -sf "$DOTFILES_DIR/.oh-my-zsh/oh-my-zsh.sh" ~
 
 # Setup GnuPG
 mkdir -p ~/.gnupg
