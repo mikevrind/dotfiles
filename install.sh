@@ -11,7 +11,6 @@ ln -sf "$DOTFILES_DIR/git/.gitignore_global" ~
 ln -sf "$DOTFILES_DIR/.mackup.cfg" ~
 ln -sf "$DOTFILES_DIR/.zshrc" ~
 ln -sf "$DOTFILES_DIR/aliases.zsh" ~
-ln -sf "$DOTFILES_DIR/.oh-my-zsh/oh-my-zsh.sh" ~
 
 # Setup GnuPG
 mkdir -p ~/.gnupg
@@ -26,6 +25,9 @@ fi
 # Update Homebrew recipes
 brew update
 
+# Install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 # Install all our dependencies with bundle (See Brewfile)
 brew tap homebrew/bundle
 brew bundle
@@ -38,9 +40,6 @@ pecl install pcov
 # Create a Sites directory
 # This is a default directory for macOS user accounts but doesn't comes pre-installed
 mkdir $HOME/Code
-
-# Add theme for ZSH
-mkdir -p ~/.oh-my-zsh/themes/
 
 # Set git hook
 mkdir -p ~/.git-templates/
