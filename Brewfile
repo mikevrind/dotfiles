@@ -32,7 +32,7 @@ brew "minikube", link: false
 brew "mysql"
 brew "node"
 brew "openssl"
-brew "php@7.2", restart_service: true, link: true
+brew "php@7.2"
 brew "php-code-sniffer"
 brew "pinentry-mac"
 brew "pkg-config"

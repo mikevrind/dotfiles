@@ -2,7 +2,12 @@
 
 DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-echo "Setting up your Mac..."
+# The Brewfile handles Homebrew-based app and library installs, but there may
+# still be updates and installables in the Mac App Store. There's a nifty
+# command line interface to it that we can use to just install everything, so
+# yeah, let's do that.
+echo "› sudo softwareupdate -i -a"
+sudo softwareupdate -i -a
 
 # Link the dotfiles
 ln -sf "$DOTFILES_DIR/.curlrc" ~
@@ -33,6 +38,7 @@ brew tap homebrew/bundle
 brew bundle
 
 # Install PHP libraries via pecl
+brew link --overwrite php@7.2 --force
 pecl install redis
 pecl install xdebug
 pecl install pcov
