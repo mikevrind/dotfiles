@@ -29,13 +29,16 @@ fi
 # Update Homebrew recipes
 brew update
 
-# Overwrite .zshrc
-rm ~/.zshrc
-ln -sf "$DOTFILES_DIR/.zshrc" ~
-
 # Install all our dependencies with bundle (See Brewfile)
 brew tap homebrew/bundle
 brew bundle
+
+# Install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+
+# Overwrite .zshrc
+rm ~/.zshrc
+ln -sf "$DOTFILES_DIR/.zshrc" ~
 
 # Install PHP libraries via pecl
 brew link --overwrite php@7.2 --force
@@ -54,6 +57,3 @@ ln -sf "$DOTFILES_DIR/git/hooks" ~/.git-templates
 # Set macOS preferences
 # We will run this last because this will reload the shell
 source .macos
-
-# Install oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
