@@ -1,0 +1,12 @@
+# Docker NFS performance optimisation
+# Credits: https://www.jeffgeerling.com/blog/2020/revisiting-docker-macs-performance-nfs-volumes
+
+# Allow sharing any directories in the Home directory
+sudo echo '# Allow sharing any directories in the Home directory' >> /etc/exports
+sudo echo '/System/Volumes/Data -alldirs -mapall=501:20 localhost' >> /etc/exports
+
+# Tell the NFS daemon to allow connections from any port
+echo '# Tell the NFS daemon to allow connections from any port' >> /etc/nfs.conf
+echo 'nfs.server.mount.require_resv_port = 0' >> /etc/nfs.conf
+
+sudo nfsd restart
