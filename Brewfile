@@ -79,7 +79,6 @@ mas "Microsoft Outlook", id: 985367838
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Slack", id: 803453959
-mas "Spark", id: 1176895641
 mas "Telegram", id: 747648890
 mas "The Unarchiver", id: 425424353
 mas "Unsplash Wallpapers", id: 1284863847
